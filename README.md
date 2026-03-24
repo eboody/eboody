@@ -1,19 +1,19 @@
 # Hi, I'm Eran
 
-I'm a Rust-first software engineer focused on security-sensitive data flows, system invariants, and boundary enforcement.
+I'm a Rust-first software engineer working on sensitive data, clear service boundaries, and APIs that make bad states harder to represent.
 
 ## Start here
 
-- [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized end-to-end flow plus screenshots from the current `eran.codes` secure-data proof slice.
+- [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized writeup of EMR sync, encrypted PHI storage, token handling, and the public `eran.codes` demo that backs it up.
 - [`eran.codes`](https://github.com/eboody/eran.codes): my current public Rust reference app for layered architecture, persistence-backed auth and sessions, runtime visibility, and operational surfaces.
 - [`statum`](https://github.com/eboody/statum): typestate framework for legal state transitions and rebuilding typed workflow state from persisted data.
 
 ## What I build
 
 - healthcare integrations against the Elation EMR API
-- AES-256-GCM encryption for PHI fields
-- multi-service Rust systems with explicit trust boundaries
-- compile-time safety, typestate, and API-shape tooling
+- encrypted storage for PHI fields
+- Rust services with clear boundaries between external systems, app logic, and storage
+- type-driven libraries focused on state and API design
 
 ## Production impact
 
@@ -28,12 +28,12 @@ I'm a Rust-first software engineer focused on security-sensitive data flows, sys
 - [`nestum`](https://github.com/eboody/nestum): proc macro for nested enum paths that keeps structured state readable without flattening it away.
 - [`maud-extensions`](https://github.com/eboody/maud-extensions): proc macros for Maud components with inline CSS, JS, slots, and font helpers.
 
-## What I try to make true in code
+## What I care about
 
 - boundaries are explicit
-- invalid paths do not look like valid API usage
-- security properties are enforced structurally, not socially
-- runtime behavior is visible enough to inspect, debug, and trust
+- risky paths do not look like normal API usage
+- security rules are built into the system instead of left to convention
+- runtime behavior is visible enough to inspect and debug
 
 ## Links
 

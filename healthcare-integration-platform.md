@@ -1,6 +1,6 @@
 # Healthcare Integration Platform
 
-This is a sanitized overview of an independent Rust project built around healthcare integrations, encrypted PHI handling, and explicit service boundaries.
+This is a sanitized overview of an independent Rust project built around healthcare integrations, encrypted PHI handling, and clear service boundaries.
 
 ## What the system did
 
@@ -21,19 +21,19 @@ Elation EMR API
      -> decrypt-on-read only for authorized surfaces
 ```
 
-In practice, that meant a background sync job could ingest external records without turning the rest of the application into a broad plaintext data surface. Sensitive fields were encrypted before persistence, and internal consumers only got decrypted values through narrow authorized paths.
+In practice, that meant a background sync job could ingest external records without turning the rest of the application into a broad plaintext access path. Sensitive fields were encrypted before they were stored, and internal consumers only got decrypted values through narrow authorized paths.
 
-## Current public proof
+## Public demo
 
-The closest public artifact for this kind of work is the secure-data slice in [`eran.codes`](https://github.com/eboody/eran.codes).
+The closest public version of this work is the secure-data demo in [`eran.codes`](https://github.com/eboody/eran.codes).
 
 ![Current proof case](./assets/sensitive-sync-case.png)
 
-The case page makes the public claim surface explicit: encrypted sensitive records, provider-token lifecycle, bounded background sync, and the scope limits of the implementation.
+This page shows the focused case study: encrypted records, token refresh, background sync, and clear limits on what the demo does and does not claim.
 
 ![Live sensitive-proof panel](./assets/lab-sensitive-proof.png)
 
-The live proof panel shows the runtime side of that slice: access policy, redacted records, operator-only token visibility, key-custody state, denied authorized access, and recent audit evidence.
+This panel shows the live runtime view: access rules, redacted records, token details for operators, key state, denied reads, and audit entries.
 
 ## Architecture
 
@@ -44,7 +44,7 @@ The project was a multi-crate Rust workspace with dedicated pieces for:
 - auth and RPC
 - core domain libraries
 
-The important part was not crate count by itself. It was keeping trust boundaries explicit so external EMR behavior, internal services, and storage concerns did not collapse into one layer.
+The important part was not the crate count by itself. It was keeping the boundaries clear so external EMR behavior, internal services, and storage concerns did not collapse into one layer.
 
 ## Sensitive data handling
 
@@ -62,9 +62,9 @@ The important part was not crate count by itself. It was keeping trust boundarie
 
 ## What this was proving
 
-- sensitive external data could move through the system without flattening service boundaries
-- token lifecycle work stayed isolated from business logic that only needed scoped access
-- encrypted-at-rest storage and decrypt-on-read access were implementation defaults, not optional conventions
+- sensitive data could move through the system without flattening the service boundaries
+- token handling stayed separate from the business logic that only needed scoped access
+- encrypted-at-rest storage and decrypt-on-read access were built into the system, not left to convention
 
 ## Why this is sanitized
 
