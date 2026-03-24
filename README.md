@@ -1,44 +1,36 @@
 # Hi, I'm Eran
 
-I build Rust systems where correctness, security, and data boundaries are explicit.
+I'm a Rust-first software engineer focused on system boundaries, security-sensitive data flow, and invariants enforced in code.
 
-Current focus: turning [`eran.codes`](https://github.com/eboody/eran.codes) into a public Rust reference app for explicit boundaries, persistence-backed auth, runtime visibility, and secure data flow.
+Right now I'm using [`eran.codes`](https://github.com/eboody/eran.codes) as a public Rust reference app for:
+- layered application structure
+- persistence-backed auth and sessions
+- runtime visibility and operational surfaces
+- secure data flow and integration boundaries
 
-My work centers on:
-- security-sensitive data flows
-- compile-time invariants and typed workflows
-- service boundaries and controlled data movement
-- tooling that makes invalid states harder to represent
+## Open-source work
 
-## Selected work
-
-### [statum](https://github.com/eboody/statum)
-Typestate framework for Rust. It enforces legal state transitions at compile time and supports rebuilding typed workflow state from persisted data.
-
-### [eran.codes](https://github.com/eboody/eran.codes)
-My personal site and lab. It is also a Rust codebase where I explore application structure, crate boundaries, runtime visibility, and UI experiments.
-
-### [modum](https://github.com/eboody/modum)
-Rust tooling for keeping module naming, import style, and public API paths consistent across a workspace.
-
-### [nestum](https://github.com/eboody/nestum)
-A Rust crate for making nested enums read more like nested paths, reducing friction around deeply structured state.
-
-### [maud-extensions](https://github.com/eboody/maud-extensions)
-Proc macros for Maud components with inline CSS, JS, slots, and font helpers.
+- [`statum`](https://github.com/eboody/statum): typestate framework for legal state transitions and rebuilding typed workflow state from persisted data.
+- [`eran.codes`](https://github.com/eboody/eran.codes): my personal site and lab, built as a Rust system with explicit crate boundaries and inspectable runtime behavior.
+- [`modum`](https://github.com/eboody/modum): workspace lint tool for consistent module naming, import style, and public API paths.
+- [`nestum`](https://github.com/eboody/nestum): proc macro for nested enum paths that keeps structured state readable without flattening it away.
+- [`maud-extensions`](https://github.com/eboody/maud-extensions): proc macros for Maud components with inline CSS, JS, slots, and font helpers.
 
 ## Systems work
 
-In independent work, I built a multi-crate Rust healthcare integration platform with dedicated web, token, sync, auth, RPC, and core domain layers. The system handled EMR synchronization, encrypted PHI fields with AES-256-GCM, used Redis-backed token and lookup caching, and enforced explicit service boundaries around sensitive data access.
+I built a multi-crate Rust healthcare integration platform with separate web, token, sync, auth, RPC, and core domain layers. It handled EMR synchronization, AES-256-GCM encryption for PHI fields, Redis-backed token and lookup caching, and explicit service boundaries around sensitive data access.
 
-I have also built production automation and integration systems that replaced delayed manual workflows with realtime data movement, increased operator throughput substantially, and supported products used by major nonprofit organizations.
+I also built production automation and realtime data systems that:
+- increased fundraiser acknowledgment throughput by roughly 12x per operator
+- scaled to 72 concurrent workers
+- replaced a 48-hour CSV lag with realtime fundraiser and donation visibility
 
-## What I care about
+## What I optimize for
 
-- boundaries that are visible in the code
-- APIs that make illegal states difficult to express
-- security properties enforced structurally, not socially
-- tooling that improves correctness without making teams slower
+- boundaries that are visible in the codebase
+- APIs that remove illegal paths from call sites
+- security properties enforced by structure instead of convention
+- runtime behavior you can inspect while the system is running
 
 ## Links
 
