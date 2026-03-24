@@ -4,7 +4,7 @@ I'm a Rust-first software engineer focused on security-sensitive data flows, sys
 
 ## Start here
 
-- [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized end-to-end flow covering EMR sync, PHI encryption, token handling, and authorized read boundaries.
+- [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized end-to-end flow plus screenshots from the current `eran.codes` secure-data proof slice.
 - [`eran.codes`](https://github.com/eboody/eran.codes): my current public Rust reference app for layered architecture, persistence-backed auth and sessions, runtime visibility, and operational surfaces.
 - [`statum`](https://github.com/eboody/statum): typestate framework for legal state transitions and rebuilding typed workflow state from persisted data.
 

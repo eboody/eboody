@@ -23,6 +23,18 @@ Elation EMR API
 
 In practice, that meant a background sync job could ingest external records without turning the rest of the application into a broad plaintext data surface. Sensitive fields were encrypted before persistence, and internal consumers only got decrypted values through narrow authorized paths.
 
+## Current public proof
+
+The closest public artifact for this kind of work is the secure-data slice in [`eran.codes`](https://github.com/eboody/eran.codes).
+
+![Current proof case](./assets/sensitive-sync-case.png)
+
+The case page makes the public claim surface explicit: encrypted sensitive records, provider-token lifecycle, bounded background sync, and the scope limits of the implementation.
+
+![Live sensitive-proof panel](./assets/lab-sensitive-proof.png)
+
+The live proof panel shows the runtime side of that slice: access policy, redacted records, operator-only token visibility, key-custody state, denied authorized access, and recent audit evidence.
+
 ## Architecture
 
 The project was a multi-crate Rust workspace with dedicated pieces for:
