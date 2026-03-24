@@ -1,6 +1,6 @@
 # Hi, I'm Eran
 
-I'm a Rust-first software engineer building systems for healthcare and other sensitive-data work, with clear boundaries between external systems, app logic, and storage.
+I'm a Rust-first software engineer building systems for healthcare and other sensitive-data work.
 
 ## Start here
 
