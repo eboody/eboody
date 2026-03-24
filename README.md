@@ -2,6 +2,10 @@
 
 I'm a Rust-first software engineer building systems for healthcare and other sensitive-data work.
 
+I like systems with sharp edges: healthcare integrations, encrypted PHI, sync jobs, auth and session flows, and state-heavy code that has to behave itself. If the work is sensitive, messy, or easy to get subtly wrong, that's usually where I'm having the most fun.
+
+I also have a soft spot for automation. If a script can save me hours of repetitive work, I'm probably going to write it.
+
 ## Start here
 
 - [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized writeup of EMR sync, encrypted PHI storage, token handling, and the public `eran.codes` demo that backs it up.
@@ -13,22 +17,22 @@ I'm a Rust-first software engineer building systems for healthcare and other sen
 - healthcare integrations against the Elation EMR API
 - encrypted storage for PHI fields
 - Rust services with clear boundaries between external systems, app logic, and storage
-- type-driven libraries focused on state and API design
+- type-driven libraries focused on state, workflow, and API shape
 
 ## Production impact
 
 - increased fundraiser acknowledgment throughput by roughly 12x per operator
-- scaled automation to 72 concurrent workers
-- replaced a manual CSV process lagging by 48 hours with realtime fundraiser creation and donation visibility
+- ran automation at 72 concurrent workers
+- replaced a manual CSV process that lagged by 48 hours with realtime fundraiser creation and donation visibility
 - supported products used by large national nonprofits
 
-## Other Rust projects
+## More Rust projects
 
 - [`modum`](https://github.com/eboody/modum): workspace lint tool for consistent module naming, import style, and public API paths.
 - [`nestum`](https://github.com/eboody/nestum): proc macro for nested enum paths that keeps structured state readable without flattening it away.
 - [`maud-extensions`](https://github.com/eboody/maud-extensions): proc macros for Maud components with inline CSS, JS, slots, and font helpers.
 
-## Links
+## Elsewhere
 
 - Website: [eran.codes](https://eran.codes)
 - GitHub: [@eboody](https://github.com/eboody)
