@@ -2,27 +2,23 @@
 
 I'm a Rust-first software engineer focused on security-sensitive data flows, system invariants, and boundary enforcement.
 
-This profile is meant to reflect the work I'm strongest at:
+## Start here
+
+- [`eran.codes`](https://github.com/eboody/eran.codes): my current public Rust reference app for layered architecture, persistence-backed auth and sessions, runtime visibility, and operational surfaces.
+- [`statum`](https://github.com/eboody/statum): typestate framework for legal state transitions and rebuilding typed workflow state from persisted data.
+- [Healthcare integration platform case study](./healthcare-integration-platform.md): sanitized overview of the EMR sync, PHI encryption, token handling, and service boundaries behind my strongest systems work.
+
+## What I build
+
 - healthcare integrations against the Elation EMR API
 - AES-256-GCM encryption for PHI fields
 - multi-service Rust systems with explicit trust boundaries
-- compile-time safety, typestate, and API-shape design
+- compile-time safety, typestate, and API-shape tooling
 
-## Resume-backed systems work
+## Production impact
 
-### Healthcare Integration Platform
-
-I built a multi-crate Rust workspace with dedicated web, token, sync, auth, RPC, and core domain layers. The system included:
-- Elation EMR integration and scheduled synchronization for patient, prescription, and lab-result data
-- AES-256-GCM encryption and decryption for PHI fields, with encrypted storage on write paths and controlled decrypt-on-read surfaces
-- Redis-backed caching for patient-name lookups and EMR access tokens, including refresh scheduling and expiration handling
-- explicit service boundaries between external EMR integration, internal services, and storage layers
-
-### Production Systems
-
-At GoodUnited, I built systems that:
 - increased fundraiser acknowledgment throughput by roughly 12x per operator
-- scaled to 72 concurrent workers
+- scaled automation to 72 concurrent workers
 - replaced a manual CSV process lagging by 48 hours with realtime fundraiser creation and donation visibility
 - supported products used by large national nonprofits
 
